@@ -52,6 +52,7 @@ namespace MonkeysOnARope
         /// List of Travelers that are on the rope
         /// </summary>
         public List<IRopeCrosser> Travelers = new List<IRopeCrosser>(3);
+        //TODO: Convert to methods so the max capacity can be checked and an error can be thrown if Travelers.Count > MaxCapacity 
 
     }
 }

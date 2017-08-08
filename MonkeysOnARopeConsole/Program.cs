@@ -12,7 +12,7 @@ namespace MonkeysOnARope
             bool enterPressed = false;
             do
             {
-                Console.WriteLine("Press L to add a monkey to the left side, R to add one to the right. Enter to start the run.");
+                Console.Write("Press L to add a monkey to the left side, R to add one to the right. Enter to start the run.");
                 var key = Console.ReadKey();
 
 
@@ -20,17 +20,17 @@ namespace MonkeysOnARope
                 {
                     case ConsoleKey.R:
                         w.RightQue.Add(new Monkey(string.Format("Right{0}", w.RightQue.Count + 1), World.Side.Left));
-                        Console.WriteLine(string.Format("Monkey {0} added to the Right side.", w.RightQue[w.RightQue.Count - 1].ID));
+                        Console.WriteLine(string.Format("\nMonkey {0} added to the Right side.", w.RightQue[w.RightQue.Count - 1].ID));
                         break;
                     case ConsoleKey.L:
                         w.LeftQue.Add(new Monkey(string.Format("Left{0}", w.LeftQue.Count + 1), World.Side.Right));
-                        Console.WriteLine(string.Format("Monkey {0} added to the Left side.", w.LeftQue[w.LeftQue.Count - 1].ID));
+                        Console.WriteLine(string.Format("\nMonkey {0} added to the Left side.", w.LeftQue[w.LeftQue.Count - 1].ID));
                         break;
                     case ConsoleKey.Enter:
                         enterPressed = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid input");
+                        Console.WriteLine("/nInvalid input");
                         break;
                 }
             } while (enterPressed == false);
